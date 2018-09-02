@@ -14,10 +14,12 @@ import org.activiti.engine.task.TaskQuery;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.DateFormat;
+
+
 import java.util.*;
 
 public class TestStartEvent {
@@ -83,6 +85,7 @@ public class TestStartEvent {
         Scanner scanner = new Scanner(System.in);
 
         while (processInstance != null && !processInstance.isEnded()) {
+
 
             List<Task> tasks = taskService.createTaskQuery().taskCandidateGroup("managers").list();
 

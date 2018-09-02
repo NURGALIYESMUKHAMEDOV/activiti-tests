@@ -19,7 +19,7 @@
         <endEvent id="endOnboarding" name="End"></endEvent>
         <sequenceFlow id="sid-37A73ACA-2E23-400B-96F3-71F77738DAFA" sourceRef="automatedIntro" targetRef="endOnboarding"></sequenceFlow>
         <scriptTask id="automatedIntro" name="Generic and Automated Data Entry" scriptFormat="javascript" activiti:autoStoreVariables="false">
-            <script><![CDATA[var dateAsString = new Date().toString();
+            <script><![CDATA[var dateAsString = new GDate().toString();
 execution.setVariable("autoWelcomeTime", dateAsString);]]></script>
         </scriptTask>
         <sequenceFlow id="automatedIntroPath" sourceRef="decision" targetRef="automatedIntro"></sequenceFlow>

@@ -4,7 +4,7 @@
         <startEvent id="startEvent" name="Start" activiti:initiator="initiator"></startEvent>
         <userTask id="userTask" name="User task" activiti:candidateGroups="managers">
             <extensionElements>
-                <activiti:formProperty id="birthDate" name="Birth Date" type="date"></activiti:formProperty>
+                <activiti:formProperty id="birthDate" name="Birth GDate" type="date"></activiti:formProperty>
                </extensionElements>
         </userTask>
         <sequenceFlow sourceRef="startEvent" targetRef="userTask"></sequenceFlow>
