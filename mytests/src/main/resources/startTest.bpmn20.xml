@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+    <process id="teststartevent" name="Example for StartEvent activity" isExecutable="true">
+        <startEvent id="startEvent" name="Start" activiti:initiator="initiator"></startEvent>
+        <userTask id="userTask" name="User task" activiti:candidateGroups="managers">
+            <extensionElements>
+                <activiti:formProperty id="birthDate" name="Birth Date" type="date"></activiti:formProperty>
+               </extensionElements>
+        </userTask>
+        <sequenceFlow sourceRef="startEvent" targetRef="userTask"></sequenceFlow>
+        <endEvent id="endEvent" name="End"></endEvent>
+        <sequenceFlow sourceRef="userTask" targetRef="endEvent"></sequenceFlow>
+    </process>
+</definitions>
